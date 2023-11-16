@@ -3,6 +3,6 @@ from django.urls import include, path
 from authentication import views
 
 urlpatterns = [
-    path('', views.home, name="home"),
-    path('signup', views.signup, name="signup"),
+    path('', views.home, name="home"), #'' means nothing after website domain, so just 127.0.0.1:8000/
+    path('signup', views.signup, name="signup"), # means 127.0.0.1:8000/signup/
 ]

@@ -19,5 +19,7 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('authentication.urls')),
+    path('', include('authentication.urls')), # 127.0.0.1:8000/ is directed to our django app
+
+    # if we also write path('signup/', include('authentication.urls')), this means that 127.0.0.1:8000/signup/ is also directed to our django app, which we dont want.
 ]
