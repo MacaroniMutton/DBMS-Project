@@ -85,12 +85,12 @@
                         </label>
                         <!-- <a href="#">Forgot your password?</a> -->
                         {% if messages %}
-                        <ul class="messages">
-                            {% for message in messages %}
-                                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
+                            <ul class="messages">
+                                {% for message in messages %}
+                                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
                         <button style="margin-top: 9px" type="submit" name="login" value="login">Sign In</button>
                     </form>
                 </div>

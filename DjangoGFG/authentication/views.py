@@ -34,13 +34,16 @@ def signup(request):
             if user is not None:
                 # User authentication successful
                 messages.success(request, "You have successfully logged in!")
-                return redirect('gamepage')
+                return redirect('suclog')
             else:
                 # Invalid login credentials
                 messages.error(request, "Invalid login credentials")
     
     return render(request, 'login.html')
 
+
+def suclog(request):
+    return render(request, 'successlogin.html')
 
 def gamepage(request):
     return render(request, 'game.html')
