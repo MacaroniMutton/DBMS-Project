@@ -46,4 +46,16 @@ def suclog(request):
     return render(request, 'successlogin.html')
 
 def gamepage(request):
+    
+    if request.method == "POST":
+        if "delete" in request.POST:
+            name=request.POST['username']
+        try:
+            user = Player.objects.get(username=name)
+        except Player.DoesNotExist:
+            user = None
+        if user is not None:
+            user.delete()
+        else:
+            messages.error(request, "Invalid login credentials")
     return render(request, 'game.html')
