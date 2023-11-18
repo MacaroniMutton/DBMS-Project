@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayerProfile</title>
+</head>
+<body>
+    <h1>Player Profile</h1>
+
+    {% if player_profile %}
+        <p>Username: {{ player_profile.username.username }}</p>
+        <p>Level: {{ player_profile.level }}</p>
+        <p>Rank: {{ player_profile.rank }}</p>
+        <p>Games Played: {{ player_profile.games_played }}</p>
+        <p>Matches Won: {{ player_profile.matches_won }}</p>
+        <p>Matches Lost: {{ player_profile.matches_lost }}</p>
+        <!-- Add other attributes as needed -->
+    {% else %}
+        <p>No player profile found.</p>
+    {% endif %}
+    <button style="margin-top: 9px" type="submit" onclick="location.href='/gamepage'">Go Back</button>
+</body>
+</html>

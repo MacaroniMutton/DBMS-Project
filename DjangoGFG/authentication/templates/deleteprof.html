@@ -6,20 +6,17 @@
     <title>Game</title>
 </head>
 <body>
-    <h1>We are In.</h1>
+    <h1>Are you sure you want to delete your profile? You won't be able to recover it.</h1>
     <!-- <form action="#" method="post">
         {% csrf_token %}
         <label>
             <input type="text" name="username" placeholder="Name" required />
         <button style="margin-top: 9px" type="submit" name="delete" value="register">Delete</button>
     </form> -->
-    <!-- <form action="#" method="post">
+    <form action="#" method="post">
         {% csrf_token %}
         <button style="margin-top: 9px" type="submit" name="delete" value="delete">Delete Profile</button>
-    </form> -->
-    <button style="margin-top: 9px" type="submit" onclick="location.href='/playresults'">Play Match</button>
-    <button style="margin-top: 9px" type="submit" onclick="location.href='/deleteProfile'">Delete Profile</button>
-    <button style="margin-top: 9px" type="submit" onclick="location.href='/playerProfile'">View Profile</button>
-    <button style="margin-top: 9px" type="submit" onclick="location.href='/'">Exit</button>
+    </form>
+    <button style="margin-top: 9px" type="submit" onclick="location.href='/gamepage'">Go Back</button>
 </body>
 </html>

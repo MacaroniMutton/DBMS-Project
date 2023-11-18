@@ -7,4 +7,7 @@ urlpatterns = [
     path('signup', views.signup, name="signup"), # means 127.0.0.1:8000/signup/
     path('gamepage', views.gamepage, name="gamepage"),
     path('suclog', views.suclog, name="suclog"),
+    path('playerProfile', views.playerProfile, name="playerProfile"),
+    path('deleteProfile', views.deleteProfile, name="deleteProfile"),
+    path('playresults', views.playresults, name="playresults"),
 ]

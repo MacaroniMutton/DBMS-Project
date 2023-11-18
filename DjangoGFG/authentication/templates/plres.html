@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Results</title>
+</head>
+<body>
+    <h1>Match Results</h1>
+
+    {% if match_won %}
+        <p>Congratulations! You won the match!</p>
+    {% else %}
+        <p>Sorry, you lost the match.</p>
+    {% endif %}
+
+    <p>Rounds Won: {{ rounds_won }}</p>
+    <p>Rounds Lost: {{ rounds_lost }}</p>
+    <p>Average Combat Score: {{ avg_combat_score }}</p>
+    <p>First Blood: {{ first_blood }}</p>
+    <p>Plants: {{ plants }}</p>
+    <p>Defuses: {{ defuses }}</p>
+    <button style="margin-top: 9px" type="submit" onclick="location.href='/gamepage'">Go Back</button>
+</body>
+</html>
